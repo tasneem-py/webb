@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Color Picker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img id="image" src="https://miro.medium.com/v2/resize:fit:1200/1*3l_gNnYqeGpwNUoQEYGM9w.jpeg" alt="Preview Image"/>
+    
+    <input type="file" id="file" accept="image/*" />
+    <label for="file">Choose Image</label>
+    <button id="pick-color">Pick Color</button>
+
+    <div id="error"></div>
+
+    <div class="result" id="result">
+      <div class="color-box" id="picked-color"></div>
+      <div class="color-values">
+        <input type="text" id="hex-val" readonly onclick="copyColor(this)">
+        <input type="text" id="rgb-val" readonly onclick="copyColor(this)">
+      </div>
+    </div>
+
+    <div id="alert">Color Code Copied!</div>
+  </div>
+
+  <script src="color.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  color: #ffffff;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5em;
+  padding: 2em;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.container img {
+  width: 100%;
+  border-radius: 0.75em;
+  margin-bottom: 1.5em;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.container img:hover {
+  transform: scale(1.02);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label,
+button {
+  display: inline-block;
+  background: linear-gradient(135deg, #00cba9, #00b8d4);
+  color: white;
+  padding: 0.75em 1.6em;
+  border: none;
+  border-radius: 0.6em;
+  cursor: pointer;
+  margin: 0.6em 0.4em;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 203, 169, 0.4);
+}
+
+label:hover,
+button:hover {
+  background: linear-gradient(135deg, #00bfa6, #00a7c2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 203, 169, 0.5);
+}
+
+.result {
+  display: none;
+  margin-top: 1.8em;
+}
+
+.color-box {
+  width: 100%;
+  height: 60px;
+  border-radius: 0.6em;
+  margin: 1.2em 0;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  transition: border-color 0.3s ease;
+}
+
+.color-values input {
+  width: 100%;
+  padding: 0.65em;
+  margin: 0.5em 0;
+  font-size: 1em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5em;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.color-values input:focus {
+  outline: none;
+  border-color: #00cba9;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+#alert {
+  margin-top: 1em;
+  background: linear-gradient(135deg, #00cba9, #00b8d4);
+  color: #fff;
+  padding: 0.6em 1.2em;
+  border-radius: 0.5em;
+  transform: scale(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+#alert.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+#error {
+  margin-top: 1em;
+  color: #ff6b6b;
+  font-size: 0.95em;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5em;
+  }
+
+  label,
+  button {
+    width: 100%;
+    margin: 0.6em 0;
+  }
+
+  .color-box {
+    height: 50px;
+  }
+
+  .color-values input {
+    font-size: 0.95em;
+  }
+}
